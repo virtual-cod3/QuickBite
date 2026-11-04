@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickBite | Checkout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="checkout">
+
+<header class="navbar">
+  <a href="index.html" class="brand"><span class="brand-icon">Q</span> Quick<span class="orange">Bite</span></a>
+  <a href="index.html#categories" class="text-link">← Continue shopping</a>
+</header>
+
+<main class="checkout-page">
+  <div class="checkout-heading">
+    <span class="eyebrow">ALMOST THERE</span>
+    <h1>Complete your order</h1>
+    <p>Just a few details and your food will be on its way.</p>
+  </div>
+
+  <div class="checkout-layout" id="checkoutLayout">
+    <form class="checkout-form" id="checkoutForm">
+
+      <section class="form-section">
+        <h2>01. Your details</h2>
+        <label for="customerName">Full name</label>
+        <input id="customerName" type="text" placeholder="Enter your name" required maxlength="60">
+
+        <label for="customerPhone">Phone number</label>
+        <input id="customerPhone" type="tel" placeholder="10-digit mobile number"
+               inputmode="numeric" pattern="[0-9]{10}" maxlength="10" required>
+      </section>
+
+      <section class="form-section">
+        <h2>02. Order type</h2>
+        <div class="choice-grid">
+          <label class="choice-card">
+            <input type="radio" name="orderType" value="delivery" checked>
+            <span>🚚</span><strong>Home delivery</strong>
+            <small>Delivered to your door</small>
+          </label>
+          <label class="choice-card">
+            <input type="radio" name="orderType" value="takeaway">
+            <span>🛍️</span><strong>Takeaway</strong>
+            <small>Pick up your order</small>
+          </label>
+        </div>
+
+        <div id="addressField">
+          <label for="customerAddress">Delivery address</label>
+          <textarea id="customerAddress" rows="3" maxlength="250"
+                    placeholder="House number, street, area and city" required></textarea>
+        </div>
+      </section>
+
+      <section class="form-section">
+        <h2>03. Payment method</h2>
+        <div class="choice-grid">
+          <label class="choice-card">
+            <input type="radio" name="paymentMethod" value="cash" checked>
+            <span>💵</span><strong>Cash</strong>
+            <small>Pay when you receive your order</small>
+          </label>
+          <label class="choice-card">
+            <input type="radio" name="paymentMethod" value="card">
+            <span>💳</span><strong>Card</strong>
+            <small>Simulated online payment</small>
+          </label>
+        </div>
+        <p class="payment-note">This is a demonstration website. Card selection simulates checkout only; no real card details or payments are collected.</p>
+      </section>
+
+      <button type="submit" class="primary-button place-order-button">Place my order →</button>
+      <p class="form-error" id="formError" role="alert"></p>
+    </form>
+
+    <aside class="order-summary">
+      <h2>Your order</h2>
+      <div id="checkoutItems"></div>
+      <div id="checkoutTotals"></div>
+    </aside>
+  </div>
+
+  <section class="success-panel hidden" id="successPanel">
+    <div class="success-icon">✓</div>
+    <span class="eyebrow">ORDER CONFIRMED</span>
+    <h1>You're all set!</h1>
+    <p id="successMessage"></p>
+    <div class="success-order" id="successOrder"></div>
+    <a href="index.html" class="primary-button">Back to home →</a>
+  </section>
+</main>
+
+<footer class="footer">
+  <a href="index.html" class="brand"><span class="brand-icon">Q</span> Quick<span class="orange">Bite</span></a>
+  <p>Good food. Great moments. © 2026 QuickBite.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

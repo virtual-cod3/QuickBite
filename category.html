@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickBite | Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="category">
+
+<header class="navbar">
+  <a href="index.html" class="brand"><span class="brand-icon">Q</span> Quick<span class="orange">Bite</span></a>
+  <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="index.html#categories">Categories</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="cart-button" id="openCart">My Cart <span id="cartCount" class="cart-count">0</span></button>
+    <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Toggle navigation">☰</button>
+  </div>
+</header>
+
+<main class="category-page">
+  <a href="index.html#categories" class="back-link">← Back to categories</a>
+
+  <div class="category-title">
+    <span class="eyebrow">MADE FRESH FOR YOU</span>
+    <h1 id="categoryTitle">Our Menu</h1>
+    <p id="categoryDescription">Explore our delicious selection.</p>
+  </div>
+
+  <nav class="category-tabs" aria-label="Food categories">
+    <a href="category.html?type=burgers" data-category="burgers">Burgers</a>
+    <a href="category.html?type=pizza" data-category="pizza">Pizza</a>
+    <a href="category.html?type=drinks" data-category="drinks">Drinks</a>
+    <a href="category.html?type=desserts" data-category="desserts">Desserts</a>
+  </nav>
+
+  <div class="product-grid category-products" id="categoryProducts"></div>
+</main>
+
+<footer class="footer">
+  <a href="index.html" class="brand"><span class="brand-icon">Q</span> Quick<span class="orange">Bite</span></a>
+  <p>Good food. Great moments. © 2026 QuickBite.</p>
+</footer>
+
+<div class="overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer">
+  <div class="drawer-header">
+    <div><span class="eyebrow">YOUR ORDER</span><h2>Your cart</h2></div>
+    <button class="close-button" id="closeCart" aria-label="Close cart">×</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-summary" id="cartSummary"></div>
+  <a href="checkout.html" class="primary-button checkout-link" id="checkoutLink">Continue to checkout →</a>
+</aside>
+
+<script src="js/script.js"></script>
+</body>
+</html>
